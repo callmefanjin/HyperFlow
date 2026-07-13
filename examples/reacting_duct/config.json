@@ -1,0 +1,23 @@
+{
+  "mechanism": "h2o2.yaml",
+  "chemistry": true,
+  "dt": 1e-07,
+  "t_final": 5e-05,
+  "n_snapshots": 6,
+  "initial": "initial.h5",
+  "boundary": {
+    "inlet": {
+      "type": "riemann",
+      "p": 100000.0,
+      "T": 1200.0,
+      "u": 50.0,
+      "X": "H2:0.17361111, O2:0.17361111, N2:0.65277778"
+    },
+    "outlet": {
+      "type": "riemann",
+      "p": 100000.0,
+      "T": 1200.0,
+      "X": "H2:0.17361111, O2:0.17361111, N2:0.65277778"
+    }
+  }
+}
