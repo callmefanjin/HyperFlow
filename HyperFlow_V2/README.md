@@ -1,6 +1,6 @@
 # HyperFlow V2
 
-HyperFlow solves quasi-one-dimensional reacting flow in variable-area ducts using finite volumes, NND/HLLC fluxes, Cantera thermochemistry and coupled implicit integration.
+HyperFlow is an unsteady one-dimensional compressible reacting-flow solver for variable-area ducts. V2 uses finite volumes, NND/HLLC fluxes, Cantera thermochemistry and coupled implicit integration.
 
 ## DME heat-source example
 

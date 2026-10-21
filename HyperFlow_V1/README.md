@@ -1,79 +1,19 @@
-# HyperFlow
+# HyperFlow V1
 
-One-dimensional variable-area compressible duct flow with optional finite-rate chemistry (Cantera).
+HyperFlow is an unsteady one-dimensional compressible reacting-flow solver for variable-area ducts. V1 uses NND/HLLC fluxes, explicit Heun time integration and Strang splitting with Cantera chemistry.
 
-## Repository layout
+## Sod shock-tube example
 
-```text
-HyperFlow/
-├── README.md
-├── Makefile
-├── src/                 # C++ solver sources
-├── docs/                # Theory & verification notes
-├── examples/
-│   ├── sod_shock/       # chemistry off
-│   └── reacting_duct/   # chemistry on
-└── tools/               # Initial-field & post-compare scripts
-```
+A 1 m constant-area tube, initially at rest, with a diaphragm at 0.5 m. Left state: 100 kPa and 300 K; right state: 10 kPa and 240 K. Air, chemistry off, 400 cells.
 
-## Equations
+![Sod shock-tube comparison](examples/sod_shock/sod_compare_params.png)
 
-$$
-\partial_t \mathbf{U} + \partial_x \mathbf{F} = \mathbf{S}_A + \mathbf{S}_{\mathrm{chem}}
-$$
+*Density, pressure, velocity and temperature at 0.4025 ms, compared with the exact ideal-gas Riemann solution using gamma = 1.4.*
 
-- $\mathbf{U}=[\rho A,\rho u A,\rho A e_t,\rho A Y_k]^\top$
-- $\mathbf{S}_A$: momentum geometric source $pA\,\mathrm{d}\ln A/\mathrm{d}x$
-- $\mathbf{S}_{\mathrm{chem}}$: operator-split constant-volume chemistry (`chemistry: true`)
+## Core capabilities
 
-Space: NND + HLLC; time: Heun; Strang splitting when chemistry is on.
+- Unsteady transport of mass, momentum, total energy and species.
+- Prescribed duct area and initial flow field.
+- Finite-rate chemistry through Cantera constant-volume reactors.
 
-## Dependencies
-
-- C++17, Eigen3, nlohmann_json, HDF5, Cantera, OpenMP
-
-## Build
-
-```bash
-make
-```
-
-## Case layout
-
-```text
-case/
-  config.json
-  initial.h5      # datasets x[nface], A[nface], U[nVar,nface]
-  out/            # snapshots after a run
-```
-
-Run examples:
-
-```bash
-./HyperFlow examples/sod_shock        # chemistry off (Sod)
-./HyperFlow examples/reacting_duct   # chemistry on (hot premixed H2/air)
-
-python tools/make_sod_initial.py
-python tools/make_reacting_initial.py
-```
-
-## `config.json` fields
-
-| Field | Meaning |
-|------|------|
-| `mechanism` | Cantera mechanism |
-| `chemistry` | `true` / `false` |
-| `dt`, `t_final`, `n_snapshots` | Time marching |
-| `boundary.inlet` | `p,T,u,X` (Riemann inlet reservoir) |
-| `boundary.outlet` | `p,T,X` (subsonic back-pressure ambient) |
-
-No injection, mixing, or wall friction; area and initial field come from `initial.h5`.
-
-Theory and Sod verification: see [`docs/TechnicalNotes.md`](docs/TechnicalNotes.md).
-
-## Sod comparison plot
-
-```bash
-./HyperFlow examples/sod_shock
-python tools/compare_sod.py   # → examples/sod_shock/sod_compare_params.png
-```
+[Compact formulation](docs/TechnicalNotes.md) · [V2 additions](../HyperFlow_V2/README.md#changes-from-v1)
