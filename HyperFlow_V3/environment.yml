@@ -1,0 +1,17 @@
+name: hyperflow2d
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - cmake>=3.20
+  - make
+  - cxx-compiler
+  - libcantera=3.2.0
+  - cantera=3.2.0
+  - sundials=7.5.0
+  - fmt=12
+  - eigen=5
+  - nlohmann_json=3.11.2
+  - numpy
+  - scipy
+  - matplotlib

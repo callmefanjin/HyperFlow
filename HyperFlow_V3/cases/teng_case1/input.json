@@ -1,0 +1,65 @@
+{
+  "P0": 1202900.0,
+  "T0": 958.1,
+  "base_cells": [
+    144,
+    64
+  ],
+  "blocking_factor": 4,
+  "boundary_hi": [
+    "transmissive",
+    "inflow"
+  ],
+  "boundary_lo": [
+    "inflow",
+    "wedge"
+  ],
+  "case_name": "Teng-OSW/Case1-Li",
+  "cfl": 0.6,
+  "chemistry": true,
+  "chemistry_threads": 4,
+  "end_time": 5e-06,
+  "fuel_rate_tag": 50.0,
+  "inflow_speed": 2737.7,
+  "length": [
+    0.002304,
+    0.001024
+  ],
+  "max_grid_size": 32,
+  "max_level": 2,
+  "mechanism": "H2_Li.yaml",
+  "origin": [
+    -0.000128,
+    0.0
+  ],
+  "output_times": [
+    5e-07,
+    1e-06,
+    2e-06,
+    3e-06,
+    4e-06,
+    5e-06
+  ],
+  "periodic": [
+    0,
+    0
+  ],
+  "pressure_tag": 0.08,
+  "problem": "teng_osw",
+  "reference_doi": "10.1017/jfm.2020.1131",
+  "reference_figure": "3(a)",
+  "regrid_interval": 8,
+  "tag_box": [
+    -3.2e-05,
+    0.000128,
+    0.0,
+    6.4e-05
+  ],
+  "tag_buffer": 2,
+  "temperature_tag": 0.06,
+  "u0": 2588.5462044182495,
+  "v0": -891.3079364573576,
+  "wedge_angle_deg": 19.0,
+  "wedge_start": 0.0,
+  "write_plotfiles": true
+}

@@ -1,0 +1,84 @@
+{
+  "production_solver": "hyperflow2d",
+  "source_tree": "src",
+  "case_inputs": [
+    "cases/sun_cj/input.json",
+    "cases/teng_case1/input.json"
+  ],
+  "sources": {
+    "BlockAMR.cpp": {
+      "sha256": "dc756971288c25b3c0166da03e40f69bb169e7e12b9481657cf1867df6b26430",
+      "origin": "HyperFlow_2D_BlockAMR/src/BlockAMR.cpp",
+      "change": "unchanged"
+    },
+    "BlockAMR.hpp": {
+      "sha256": "cfe5129366789bb03278e098ac1cdc9b4f008d6ab6d94df80db83560e3314d19",
+      "origin": "HyperFlow_2D_BlockAMR/src/BlockAMR.hpp",
+      "change": "unchanged"
+    },
+    "ConservativeInterp.cpp": {
+      "sha256": "bcc90aba9e1045c1a42cd12e15e365515fc4a77622e36b653f0e9d0d263c8f2f",
+      "origin": "HyperFlow_2D_BlockAMR/src/ConservativeInterp.cpp",
+      "change": "unchanged"
+    },
+    "ConservativeInterp.hpp": {
+      "sha256": "f4d17c4b51414fc0ba489f218d582eac10bfe015e1de7a71eb4ff4929b527670",
+      "origin": "HyperFlow_2D_BlockAMR/src/ConservativeInterp.hpp",
+      "change": "unchanged"
+    },
+    "FlowBoundary.hpp": {
+      "sha256": "2f4c68b9515bb0a23b1a68eef3e1a219031bb76989812c385a2695ad3d1a5d45",
+      "origin": "HyperFlow_2D_BlockAMR/src/FlowBoundary.hpp",
+      "change": "unchanged"
+    },
+    "chemistry.cpp": {
+      "sha256": "a0eaa099b5c323f0bb4a911b7e1f596826d9eba394efac5f1bfc79b0e0769c32",
+      "origin": "HyperFlow_2D_BlockAMR/src/chemistry.cpp",
+      "change": "unchanged"
+    },
+    "chemistry_batch.cpp": {
+      "sha256": "b624ab520a022ae6b2776a13297aeb77a77841d17bef3d2e7a245c13d9ae4d95",
+      "origin": "HyperFlow_2D_BlockAMR/src/chemistry_batch.cpp",
+      "change": "unchanged"
+    },
+    "chemistry_batch.hpp": {
+      "sha256": "d7e05471f73bbe2ac866c78f7a601a2b4602652c0719bbe1d978b00a9353f4e3",
+      "origin": "HyperFlow_2D_BlockAMR/src/chemistry_batch.hpp",
+      "change": "unchanged"
+    },
+    "main.cpp": {
+      "sha256": "a9b793eedc71f8f88ac0bc103faaf41add3ef482c9bf0529a3a8e2e3feac0f53",
+      "origin": "HyperFlow_2D_BlockAMR/src/main.cpp",
+      "change": "usage text only"
+    },
+    "physics.cpp": {
+      "sha256": "e9596ac7651907926451af766234fb1ee64b8030642c9366f9ebc36ba6ed82fe",
+      "origin": "HyperFlow_2D_BlockAMR/src/physics.cpp",
+      "change": "unchanged"
+    },
+    "solver.hpp": {
+      "sha256": "2ecfd88b78ead47788a1882b9cb491c3fecc0c66c6b6b01b2b64e7a38fae5780",
+      "origin": "HyperFlow_2D_BlockAMR/src/solver.hpp",
+      "change": "unchanged"
+    }
+  },
+  "figure_provenance": {
+    "sun_cj_comparison.png": {
+      "sha256": "e0cbce55937f915ff0e75ebcadbdf65dcab7e4ea866c9bb7fee09012b1334bc0",
+      "source": "user-selected comparison image, preserved byte-for-byte",
+      "benchmark": "Sun-CJ planar detonation"
+    },
+    "teng_case1_comparison.png": {
+      "sha256": "39539a0ef7cf0c57ae8311184615118c9da8ebb325c72fe61f6dd044988c7867",
+      "source": "user-selected comparison image, preserved byte-for-byte",
+      "benchmark": "Teng Case 1 oblique detonation"
+    }
+  },
+  "mechanism_sha256": "7c3f1750b04ac1ce20ecca6914033f677fd3382c1497eb72b5aace7e150af8ca",
+  "short_checks": {
+    "same_executable_both_cases": true,
+    "case_check_report": "docs/case_checks.json",
+    "amr_groups_passed": 7,
+    "boundary_check_passed": true
+  }
+}

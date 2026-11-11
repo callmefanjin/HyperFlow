@@ -1,0 +1,9 @@
+/build*/
+/runs/
+/_deps/
+__pycache__/
+*.pyc
+*.o
+*.so
+*.tmp
+.DS_Store

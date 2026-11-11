@@ -1,0 +1,48 @@
+{
+  "passed": true,
+  "solver": "hyperflow2d",
+  "cases": {
+    "sun_cj": {
+      "final_time_s": 1e-07,
+      "steps": 25,
+      "initial_leaf_cells": 13304,
+      "final_leaf_cells": 13382,
+      "dx_min_m": 2e-05,
+      "dy_min_m": 0.125,
+      "retries": 0,
+      "max_normalized_thread_difference": 0.0,
+      "initial_hotspot_volume_m3": 0.002,
+      "mass_relative_change": 0.0,
+      "energy_relative_change": 3.774758283725532e-15,
+      "max_transverse_normalized_deviation": 1.416362073699938e-09,
+      "max_transverse_absolute_deviations": {
+        "rho": 7.419944658693112e-09,
+        "u": 6.744033354743814e-07,
+        "v": 2.101965441295207e-10,
+        "p": 0.011599419638514519,
+        "T": 1.796974174794741e-06,
+        "rhoE": 0.03489643335342407,
+        "Y_H2": 1.2742916964680884e-11,
+        "Y_O2": 6.20072986012854e-11,
+        "Y_H2O": 1.7769041793513907e-10,
+        "Y_H": 4.98444124516495e-12,
+        "Y_O": 7.995383001502265e-11,
+        "Y_OH": 2.7310466388374977e-10,
+        "Y_HO2": 6.1076398658651415e-12,
+        "Y_H2O2": 2.867043286266212e-13,
+        "Y_N2": 9.19959664003045e-11
+      }
+    },
+    "teng_case1": {
+      "final_time_s": 2e-09,
+      "steps": 5,
+      "initial_leaf_cells": 10188,
+      "final_leaf_cells": 10188,
+      "dx_min_m": 4e-06,
+      "dy_min_m": 4e-06,
+      "retries": 0,
+      "max_normalized_thread_difference": 0.0,
+      "max_normalized_original_difference": 0.0
+    }
+  }
+}

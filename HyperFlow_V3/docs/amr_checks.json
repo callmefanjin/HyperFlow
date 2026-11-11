@@ -1,0 +1,149 @@
+{
+  "tests": {
+    "uniform_local_amr": {
+      "levels": [
+        0,
+        1,
+        2
+      ],
+      "leaf_cells": 1456,
+      "full_finest_cells": 4096,
+      "area": 0.00010000000000000003,
+      "uniform_deviation": 0.0,
+      "conservation": {
+        "mass": 0.0,
+        "energy": 0.0,
+        "remap": 0.0
+      }
+    },
+    "moving_refine_coarsen": {
+      "levels": [
+        0,
+        1,
+        2
+      ],
+      "leaf_cells": 748,
+      "full_finest_cells": 4096,
+      "area": 0.00010000000000000005,
+      "refined_pixels": 576,
+      "coarsened_pixels": 656,
+      "conservation": {
+        "mass": 0.0,
+        "energy": 1.9833882086107895e-16,
+        "remap": 0.0
+      },
+      "steps": 58
+    },
+    "blast2d_inert": {
+      "levels": [
+        0,
+        1,
+        2
+      ],
+      "leaf_cells": 3072,
+      "full_finest_cells": 9216,
+      "area": 0.00040000000000000013,
+      "conservation": {
+        "mass": 1.5468567063832341e-16,
+        "energy": 2.902139681226103e-16,
+        "remap": 4.008534204177393e-19
+      },
+      "transpose_pressure_error": 2.9277593560855103e-13,
+      "steps": 37
+    },
+    "zero_dimensional_cvode": {
+      "relative_temperature_error": 1.268745917306631e-13,
+      "max_absolute_Y_error": 1.5795698082854415e-13,
+      "conservation": {
+        "mass": 0.0,
+        "energy": 0.0,
+        "remap": 0.0
+      },
+      "chemistry_cell_calls": 5824,
+      "expected_leaf_calls": 5824,
+      "last_team": 8
+    },
+    "chemistry_parallel": {
+      "max_normalized_difference": 0.0,
+      "absolute_differences": {
+        "t": 0.0,
+        "level": 0.0,
+        "i": 0.0,
+        "j": 0.0,
+        "x": 0.0,
+        "y": 0.0,
+        "dx": 0.0,
+        "dy": 0.0,
+        "rho": 0.0,
+        "u": 0.0,
+        "v": 0.0,
+        "p": 0.0,
+        "p_atm": 0.0,
+        "T": 0.0,
+        "rhoE": 0.0,
+        "Y_H2": 0.0,
+        "Y_O2": 0.0,
+        "Y_H2O": 0.0,
+        "Y_H": 0.0,
+        "Y_O": 0.0,
+        "Y_OH": 0.0,
+        "Y_HO2": 0.0,
+        "Y_H2O2": 0.0,
+        "Y_N2": 0.0
+      }
+    },
+    "blast2d_reacting": {
+      "conservation": {
+        "mass": 0.0,
+        "energy": 0.0,
+        "remap": 0.0
+      },
+      "peak_radical_mass_fraction": 1.4893699370443747e-07,
+      "steps": 2,
+      "retries": 0,
+      "first_order_stages": 0
+    },
+    "nonuniform_reacting_parallel": {
+      "normalized_max_errors": {
+        "t": 0.0,
+        "level": 0.0,
+        "i": 0.0,
+        "j": 0.0,
+        "x": 0.0,
+        "y": 0.0,
+        "dx": 0.0,
+        "dy": 0.0,
+        "rho": 0.0,
+        "u": 0.0,
+        "v": 0.0,
+        "p": 0.0,
+        "p_atm": 0.0,
+        "T": 0.0,
+        "rhoE": 0.0,
+        "Y_H2": 0.0,
+        "Y_O2": 0.0,
+        "Y_H2O": 0.0,
+        "Y_H": 0.0,
+        "Y_O": 0.0,
+        "Y_OH": 0.0,
+        "Y_HO2": 0.0,
+        "Y_H2O2": 0.0,
+        "Y_N2": 0.0
+      }
+    }
+  },
+  "passed": true,
+  "source_hashes": {
+    "src/BlockAMR.cpp": "dc756971288c25b3c0166da03e40f69bb169e7e12b9481657cf1867df6b26430",
+    "src/physics.cpp": "e9596ac7651907926451af766234fb1ee64b8030642c9366f9ebc36ba6ed82fe",
+    "src/ConservativeInterp.hpp": "f4d17c4b51414fc0ba489f218d582eac10bfe015e1de7a71eb4ff4929b527670",
+    "src/solver.hpp": "2ecfd88b78ead47788a1882b9cb491c3fecc0c66c6b6b01b2b64e7a38fae5780",
+    "src/ConservativeInterp.cpp": "bcc90aba9e1045c1a42cd12e15e365515fc4a77622e36b653f0e9d0d263c8f2f",
+    "src/chemistry.cpp": "a0eaa099b5c323f0bb4a911b7e1f596826d9eba394efac5f1bfc79b0e0769c32",
+    "src/chemistry_batch.cpp": "b624ab520a022ae6b2776a13297aeb77a77841d17bef3d2e7a245c13d9ae4d95",
+    "src/main.cpp": "a9b793eedc71f8f88ac0bc103faaf41add3ef482c9bf0529a3a8e2e3feac0f53",
+    "src/chemistry_batch.hpp": "d7e05471f73bbe2ac866c78f7a601a2b4602652c0719bbe1d978b00a9353f4e3",
+    "src/BlockAMR.hpp": "cfe5129366789bb03278e098ac1cdc9b4f008d6ab6d94df80db83560e3314d19",
+    "src/FlowBoundary.hpp": "2f4c68b9515bb0a23b1a68eef3e1a219031bb76989812c385a2695ad3d1a5d45"
+  }
+}
